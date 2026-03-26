@@ -9,7 +9,7 @@ variable "ami_filter" {
   description = "Name filter and owner for AMI"
   type = object ({
     name   = string
-    object = string
+    owner = string
   })
 
   default =  {
@@ -24,12 +24,12 @@ variable "environment" {
   type = object ({
     name           = string
     network_prefix = string
+  })
 
   default = {
     name           = "dev"
     network_prefix = "10.0"
   } 
-  })
 }
 
 variable "min_size" {
