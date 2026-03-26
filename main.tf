@@ -109,7 +109,7 @@ module "blog_autoscaling" {
   instance_type        = var.instance_type
 
   traffic_source_attachments = {
-    blog-alb = {
+    blog = {
       traffic_source_identifier = aws_lb_target_group.blog.arn
     }
   }
